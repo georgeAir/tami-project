@@ -1,3 +1,15 @@
 body{
-  background-color: lightgreen;
+  background-image: url('https://i.pinimg.com/originals/a1/80/e8/a180e89bd3541d2fa23546ea5fdc3300.jpg');
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  background-position: center;
+}
+
+
+img {
+  justify-content: center;
+}
+
+button {
+  justify-content: center;
 }
