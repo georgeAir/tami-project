@@ -1,6 +1,6 @@
 body{
   background-image: url('https://i.pinimg.com/originals/82/e8/5d/82e85d8197ad46533c94759662e0e817.gif');
-  /* background-size: cover; */
+  background-size: cover;
   background-size:cover;
 }
 
@@ -34,11 +34,12 @@ button {
   margin-left: auto;
   margin-right: auto;
   border-radius: 400px;
+  z-index: 10;
 
 }
 
 #begin{
-  margin-top: -18px;
+  /* margin-top: 0px; */
 }
 
 .egg {
@@ -50,7 +51,7 @@ button {
   margin-right: auto;
   width: 400px;
   height: 500px;
-  z-index: -1
+  z-index: 5;
 }
 
 .screen {
@@ -66,11 +67,23 @@ button {
 }
 
 img {
-  width: 10%;
-  height: 10%;
+  width: 7%;
+  height: 7%;
   position: absolute;
-  margin-left: 550px;
+  margin-left: 800px;
   margin-top: -200px;
   margin-right: 300px;
   z-index: 3
+}
+
+#background {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0%;
+  background: black;
+  z-index: 3;
+  transition: opacity 2s;
 }

@@ -8,7 +8,7 @@ petName.innerText = `Pet Name: ${inputName}`
 class Tamagachi {
   constructor (name) {
     this.hunger= 2
-    this.sleepiness= 5
+    this.sleepiness= 1
     this.boredom= 1
     this.age=1
     // this.health = 10
@@ -17,13 +17,6 @@ class Tamagachi {
   startGame(){
     const intervalID = setInterval(() => {
 
-      //// accessing the DOM
-      timer.innerText = `Timer: ${pet.timer}`
-      hungerElement.innerText = `Hunger: ${pet.hunger}`
-      sleepinessElement.innerText = `Sleepiness: ${pet.sleepiness}`
-      boredomElement.innerText = `Boredom: ${pet.boredom}`
-      ageElement.innerText = `Current Age: ${pet.age}`
-
       // healthElement.innerText = `Health: ${pet.health}`
       // decrement the timer variables
       this.timer--
@@ -31,37 +24,41 @@ class Tamagachi {
       this.sleepiness++
       this.boredom++
 
-      if (this.timer <= 0) {
+
+      //// accessing the DOM
+      timer.innerText = `Timer: ${pet.timer}`
+      hungerElement.innerText = `Hunger: ${pet.hunger}`
+      sleepinessElement.innerText = `Sleepiness: ${pet.sleepiness}`
+      boredomElement.innerText = `Boredom: ${pet.boredom}`
+      ageElement.innerText = `Current Age: ${pet.age}`
+
+
+
+      if (this.timer <= 0 || this.hunger >= 10 || this.sleepiness >= 10 || this.boredom >= 10) {
         clearInterval(intervalID)
         document.querySelector('#end').disabled = false
         aButton.disabled = true
         bButton.disabled = true
         cButton.disabled = true
         let endGame = alert('Thank You For Playing')
-      }else if(this.hunger >= 15 && this.hunger <= 16){
+      }else if(this.hunger >= 7 && this.hunger <= 8){
         let feedPet = confirm('Your pet is too hungry. Please feed to continue')
-      }else if(this.boredom >= 6 && this.boredom <= 7){
+      }else if(this.boredom >= 3 && this.boredom <= 3){
         let playWithPet = confirm('Your pet needs attention and wants to play.')
-      } else if(this.sleepiness >= 20 && this.sleepiness <= 21){
+      } else if(this.sleepiness >= 4 && this.sleepiness <= 4){
         let timeToSleep = confirm('Your pet looks sleepy. Turn off the lights so it can rest.')
       }
-    }, 1000)
+    }, 2000)
 }
   Food(){
     console.log(`Your pets new hunger property is ${this.hunger}`);
     console.log(`Your pets new sleepiness property is ${this.sleepiness}`);
       this.hunger--
-      this.sleepiness++
-      if (this.hunger <= 30) {
-        console.log('Your pet has died!');
-      }
+      // this.sleepiness++
   }
 
   lights(){
-    daytimeImage.classList.add('daytime')
-    nighttime.classList.remove('nighttime')
-    nighttime.classList.add('nighttime')
-    daytimeImage.classList.remove('daytime')
+    console.log('lights');
 
   }
 
@@ -72,9 +69,10 @@ class Tamagachi {
     this.sleepiness++
   }
   ageIncrease(){
-    const intervalID = setInterval(() => {
+    const levelUp = setInterval(() => {
       this.age++
-    }, 5000)
+    }, 6000)
+
   }
 
 }
@@ -129,8 +127,7 @@ aButton.addEventListener('click', (event) => {
 
 
 bButton.addEventListener('click', (event) => {
-
-
+  document.querySelector('#background').style.opacity = "75%";
 })
 
 cButton.addEventListener('click', (event) => {
