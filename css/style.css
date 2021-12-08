@@ -68,9 +68,9 @@ button {
 img {
   width: 10%;
   height: 10%;
-  position: relative;
-  margin-left: auto;
-  margin-top: -300px;
+  position: absolute;
+  margin-left: 550px;
+  margin-top: -200px;
   margin-right: 300px;
   z-index: 3
 }
