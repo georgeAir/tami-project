@@ -1,23 +1,20 @@
 body{
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/%D0%A1%D0%B2%D0%B5%D1%82_%D0%BE%D1%82_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D0%B8_-_panoramio.jpg/1200px-%D0%A1%D0%B2%D0%B5%D1%82_%D0%BE%D1%82_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D0%B8_-_panoramio.jpg');
+  background-image: url('https://i.pinimg.com/originals/82/e8/5d/82e85d8197ad46533c94759662e0e817.gif');
   /* background-size: cover; */
-  background-size: cover;
+  background-size:cover;
 }
-/* .daytime{
-  background-image: url('https://wallpaperaccess.com/thumb/3635104.jpg');
-  background-size: cover;
-} */
 
+}
 h1{
   justify-content: center;
-  color: white;
+  color: purple;
 }
 ul{
-  color:white;
-  font-size: 30px;
+  color:purple;
+  font-size: 45px;
 }
 span{
-  color: white;
+  color: purple;
   font-size: 30px;
 }
 input{
@@ -68,16 +65,12 @@ button {
   z-index: 2
 }
 
-.image {
-  width: 100px;
-  height: 100px;
+img {
+  width: 10%;
+  height: 10%;
   position: relative;
   margin-left: auto;
   margin-top: -300px;
-  margin-right: -300px;
+  margin-right: 300px;
   z-index: 3
-}
-
-.datime{
-  background-image: url('https://wallpaperaccess.com/full/3833906.jpg');
 }
