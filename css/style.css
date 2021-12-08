@@ -1,15 +1,83 @@
 body{
-  background-image: url('https://i.pinimg.com/originals/a1/80/e8/a180e89bd3541d2fa23546ea5fdc3300.jpg');
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/%D0%A1%D0%B2%D0%B5%D1%82_%D0%BE%D1%82_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D0%B8_-_panoramio.jpg/1200px-%D0%A1%D0%B2%D0%B5%D1%82_%D0%BE%D1%82_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D0%B8_-_panoramio.jpg');
+  /* background-size: cover; */
   background-size: cover;
-  /* background-repeat: no-repeat; */
-  background-position: center;
 }
+/* .daytime{
+  background-image: url('https://wallpaperaccess.com/thumb/3635104.jpg');
+  background-size: cover;
+} */
 
-
-img {
+h1{
   justify-content: center;
+  color: white;
+}
+ul{
+  color:white;
+  font-size: 30px;
+}
+span{
+  color: white;
+  font-size: 30px;
+}
+input{
+  position: relative;
+  display: block;
+  justify-content: center;
+  z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button {
+  border-style: solid;
   justify-content: center;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 400px;
+
+}
+
+#begin{
+  margin-top: -18px;
+}
+
+.egg {
+  background-image: url('https://i.pinimg.com/originals/a1/80/e8/a180e89bd3541d2fa23546ea5fdc3300.jpg');
+  border-style: solid;
+  background-size: cover;
+  border-radius: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  height: 500px;
+  z-index: -1
+}
+
+.screen {
+  border-style: solid;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background-color: lightgray;
+  margin-left: auto;
+  margin-top: -400px;
+  margin-right: auto;
+  z-index: 2
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin-left: auto;
+  margin-top: -300px;
+  margin-right: -300px;
+  z-index: 3
+}
+
+.datime{
+  background-image: url('https://wallpaperaccess.com/full/3833906.jpg');
 }
