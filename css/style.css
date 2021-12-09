@@ -73,7 +73,18 @@ img {
   margin-left: 800px;
   margin-top: -200px;
   margin-right: 300px;
-  z-index: 3
+  z-index: 3;
+  animation-name: shake;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes shake{
+  from{transform: translateX(0)}
+
+  to{transform: translateX(100px)}
 }
 
 #background {

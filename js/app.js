@@ -48,7 +48,7 @@ class Tamagachi {
       } else if(this.sleepiness >= 4 && this.sleepiness <= 4){
         let timeToSleep = confirm('Your pet looks sleepy. Turn off the lights so it can rest.')
       }
-    }, 2000)
+    }, 4000)
 }
   Food(){
     console.log(`Your pets new hunger property is ${this.hunger}`);
@@ -58,7 +58,7 @@ class Tamagachi {
   }
 
   lights(){
-    console.log('lights');
+    this.sleepiness = this.sleepiness - 2
 
   }
 
@@ -71,8 +71,14 @@ class Tamagachi {
   ageIncrease(){
     const levelUp = setInterval(() => {
       this.age++
-    }, 6000)
+    }, 5000)
 
+    // const evolvePet = document.querySelector('.birdPet')
+    if (this.age === 2){
+      document.querySelector('.birdPet').size.width = "50%";
+      document.querySelector('.birdPet').size.height = "50%";
+
+    }
   }
 
 }
@@ -109,6 +115,9 @@ const healthElement = document.querySelector('.health')
 const ageElement = document.querySelector('.age')
 // ageElement.innerText = `Current Age: ${pet.age}`
 
+const tint = document.querySelector('#background')
+
+const evolvePet = document.querySelector('.birdPet')
 ////////////////////////////////// EVENT LISTENERS ///////////////////////////////////
 
 beginButton.addEventListener('click', (event) => {
@@ -128,7 +137,12 @@ aButton.addEventListener('click', (event) => {
 
 bButton.addEventListener('click', (event) => {
   document.querySelector('#background').style.opacity = "75%";
+  pet.lights()
+  setTimeout(() => {
+    document.querySelector('#background').style.opacity = "0%";
+  }, 2000)
 })
+
 
 cButton.addEventListener('click', (event) => {
   // event.target.disabled = true
